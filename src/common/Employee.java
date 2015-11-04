@@ -2,6 +2,7 @@ package common;
 
 //Third Party library
 //https://commons.apache.org/
+import java.util.Objects;
 import org.apache.commons.lang3.builder.CompareToBuilder;
 
 /**
@@ -30,8 +31,8 @@ public class Employee implements Comparable {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 71 * hash + this.empID;
+        int hash = 7;
+        hash = 29 * hash + Objects.hashCode(this.ssn);
         return hash;
     }
 
@@ -44,11 +45,13 @@ public class Employee implements Comparable {
             return false;
         }
         final Employee other = (Employee) obj;
-        if (this.empID != other.empID) {
+        if (!Objects.equals(this.ssn, other.ssn)) {
             return false;
         }
         return true;
     }
+
+    
 
     
 
@@ -58,7 +61,7 @@ public class Employee implements Comparable {
         Employee o = (Employee)other;
         
         return new CompareToBuilder()
-               .append(this.empID, o.empID)
+               .append(this.ssn, o.ssn)
                .toComparison();
 //        // NO Magic numbers! Use constants for readability!
 //        final int BEFORE = -1;

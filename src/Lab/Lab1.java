@@ -29,6 +29,7 @@ public class Lab1 {
         
         Set<Employee> set = new TreeSet<Employee>(list);
         
+        System.out.println(list);
         System.out.println("The size of the Sorted Set is: " + set.size());
         System.out.println(set);
         
