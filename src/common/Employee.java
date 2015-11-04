@@ -123,4 +123,8 @@ public class Employee implements Comparable {
         return "Employee{" + "empID=" + empID + ", lastName=" + lastName + ", firstName=" + firstName + ", ssn=" + ssn + '}';
     }
 
+    public String getSnn() {
+        return ssn;
+    }
+
 }

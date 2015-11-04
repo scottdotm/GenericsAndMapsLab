@@ -6,14 +6,18 @@
 package Lab;
 
 import common.Employee;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.*;
+
 /**
  *
  * @author Scott
  */
-public class Lab1 {
+public class Lab3 {
     public static void main(String[] args){
-        Employee e1 = new Employee(3, "Mike", "Mick", "111-11-1111");
+        
+    Employee e1 = new Employee(3, "Mike", "Mick", "111-11-1111");
         Employee e2 = new Employee(2, "Jones", "John", "222-22-2222");
         Employee e3 = new Employee(1, "Peterson", "Amy", "333-33-3333");
         Employee e4 = new Employee(4, "Clevelend", "Rory", "444-44-4444");
@@ -27,24 +31,9 @@ public class Lab1 {
         list.add(e4);
         list.add(e5);
         
-//        Set<Employee> set = new TreeSet<Employee>(list);
-        
-        HashMap<String, Employee> employeeMap = new HashMap();
-        employeeMap.put("111-11-1111", e1);
-        employeeMap.put("222-22-2222", e2);
-        employeeMap.put("333-33-3333", e3);
-        employeeMap.put("444-44-4444", e4);
-        employeeMap.put("444-44-4444", e5);
-        
-        System.out.println("Finding the employee with the key of 333-33-3333");
-        System.out.println(employeeMap.get("333-33-3333") + "\n");
-        
-        Set<String> keys = employeeMap.keySet();
-        for(String key : keys){
-            Employee found = employeeMap.get(key);
-            System.out.println(found);
-        }
+        Set<Employee> set = new TreeSet<Employee>(list);
         
         
     }
 }
+
