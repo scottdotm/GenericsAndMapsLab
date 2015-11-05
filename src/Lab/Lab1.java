@@ -30,11 +30,11 @@ public class Lab1 {
 //        Set<Employee> set = new TreeSet<Employee>(list);
         
         HashMap<String, Employee> employeeMap = new HashMap();
-        employeeMap.put("111-11-1111", e1);
-        employeeMap.put("222-22-2222", e2);
-        employeeMap.put("333-33-3333", e3);
-        employeeMap.put("444-44-4444", e4);
-        employeeMap.put("444-44-4444", e5);
+        employeeMap.put(e1.getSsn(), e1);
+        employeeMap.put(e2.getSsn(), e2);
+        employeeMap.put(e3.getSsn(), e3);
+        employeeMap.put(e4.getSsn(), e4);
+        employeeMap.put(e5.getSsn(), e5);
         
         System.out.println("Finding the employee with the key of 333-33-3333");
         System.out.println(employeeMap.get("333-33-3333") + "\n");

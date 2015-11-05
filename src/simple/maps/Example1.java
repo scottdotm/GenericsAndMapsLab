@@ -3,6 +3,7 @@ package simple.maps;
 import common.Employee;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -37,9 +38,9 @@ public class Example1 {
                 
         // store them in a non-generified map (backward compatible)
         // implementations - Hashtable, HashMap and LinkedHashMap -- try all 3!
-        Map map = new HashMap(); // edit this!
-        map.put("333-33-3333", e1);
-        map.put("111-11-1111", e2);
+        Map map = new LinkedHashMap(); // edit this!
+        map.put(e1.getSnn(), e1);
+        map.put(e2.getSnn(), e2);
         
         // now retrieve one by its key
         Employee e = (Employee)map.get("111-11-1111");

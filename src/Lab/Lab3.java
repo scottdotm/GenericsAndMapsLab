@@ -1,21 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Lab;
 
 import common.Employee;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-import java.util.*;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+//import java.util.*;
 
 /**
- *
+ * @version 1.0
  * @author Scott
  */
 public class Lab3 {
     public static void main(String[] args){
+        
         
     Employee e1 = new Employee(3, "Mike", "Mick", "111-11-1111");
         Employee e2 = new Employee(2, "Jones", "John", "222-22-2222");
@@ -23,7 +23,6 @@ public class Lab3 {
         Employee e4 = new Employee(4, "Clevelend", "Rory", "444-44-4444");
         Employee e5 = new Employee(5, "Lemmings", "John", "444-44-4444");
         
-        //need to learn HashMap
         List<Employee> list = new ArrayList<Employee>();
         list.add(e1);
         list.add(e2);
@@ -31,9 +30,20 @@ public class Lab3 {
         list.add(e4);
         list.add(e5);
         
-        Set<Employee> set = new TreeSet<Employee>(list);
+        //This filters dupes out
+        Set<Employee> noDupes = new TreeSet<Employee>(list);
+//        System.out.println(set.toString()); - testing
         
+        List<Employee> list2 = new ArrayList<Employee>(noDupes);
         
+        Employee emp = null;
+        
+          Iterator<Employee> it = list2.iterator();
+    while (it.hasNext()) {
+        emp = it.next();
+        System.out.println(emp);
+        it.remove();
+        }
     }
 }
 

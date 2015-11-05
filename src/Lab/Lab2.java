@@ -1,12 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Lab;
 
 import common.Employee;
-import java.util.*;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+//import java.util.*;
 
 /**
  *
@@ -22,6 +20,7 @@ public class Lab2 {
         
         Map<String, Employee> employeeMap = new TreeMap<String, Employee>();
         
+        //getSnn - was throwing an exception so I canged it to return ssn; rather than an exception
         employeeMap.put(e1.getSnn(), e1);
         employeeMap.put(e2.getSnn(), e2);
         employeeMap.put(e3.getSnn(), e3);
