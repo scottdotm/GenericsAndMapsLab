@@ -35,7 +35,7 @@ public class ListOfMapsDemo {
         
         
         
-        records.add(genericObj);
+//        records.add(genericObj);
         
         
         
