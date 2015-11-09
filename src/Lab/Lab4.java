@@ -23,6 +23,7 @@ public class Lab4 {
         Employee e4 = new Employee(4, "Clevelend", "Rory", "444-44-4444");
         Employee e5 = new Employee(5, "Lemmings", "John", "444-44-4444");
         
+        
         List<Employee> list = new ArrayList<Employee>();
         list.add(e1);
         list.add(e2);
@@ -36,8 +37,6 @@ public class Lab4 {
         
         List<Employee> list2 = new ArrayList<Employee>(noDupes);
         
-        Employee emp = null;
-        
         System.out.println("Set Looping : ");
         for (Employee e : list2){
             System.out.println(e);
@@ -45,12 +44,14 @@ public class Lab4 {
         
         System.out.println("\n");
         
+        Employee emp = null;
+        
         System.out.println("Using Iterator : ");
-          Iterator<Employee> it = list2.iterator();
-    while (it.hasNext()) {
-        emp = it.next();
-        System.out.println(emp);
-        it.remove();
+        Iterator<Employee> it = list2.iterator();
+          while (it.hasNext()) {
+            emp = it.next();
+            System.out.println(emp);
+            it.remove();
         }
     }
 }
