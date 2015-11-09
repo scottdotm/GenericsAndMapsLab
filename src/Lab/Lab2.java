@@ -2,10 +2,12 @@ package Lab;
 
 //import common.Employee;
 //import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 //import java.util.List;
 import java.util.Set;
 //import java.util.*;
+
 /**
  *
  * @author Scott
@@ -42,6 +44,11 @@ public class Lab2 {
         for(String key : keys){
             Employee found = employeeMap.get(key);
             System.out.println(found);
+        }
+        
+        Collection<Employee> collection = employeeMap.values();
+        for(Employee e : collection){
+            System.out.println(e);
         }
         
         
