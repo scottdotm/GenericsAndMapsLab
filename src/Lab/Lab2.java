@@ -1,11 +1,7 @@
 package Lab;
 
 import common.Employee;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-//import java.util.*;
-
+import java.util.*;
 /**
  *
  * @author Scott
@@ -18,19 +14,32 @@ public class Lab2 {
         Employee e4 = new Employee(4, "Clevelend", "Rory", "444-44-4444");
         Employee e5 = new Employee(5, "Lemmings", "John", "444-44-4444");
         
-        Map<String, Employee> employeeMap = new TreeMap<String, Employee>();
+        //need to learn HashMap
+        List<Employee> list = new ArrayList<Employee>();
+        list.add(e1);
+        list.add(e2);
+        list.add(e3);
+        list.add(e4);
+        list.add(e5);
         
-        //getSnn - was throwing an exception so I canged it to return ssn; rather than an exception
-        employeeMap.put(e1.getSnn(), e1);
-        employeeMap.put(e2.getSnn(), e2);
-        employeeMap.put(e3.getSnn(), e3);
-        employeeMap.put(e4.getSnn(), e4);
-        employeeMap.put(e5.getSnn(), e5);
+//        Set<Employee> set = new TreeSet<Employee>(list);
         
-        Set<String> key2 = employeeMap.keySet();
-        for(String key : key2){
+        HashMap<String, Employee> employeeMap = new HashMap();
+        employeeMap.put(e1.getSsn(), e1);
+        employeeMap.put(e2.getSsn(), e2);
+        employeeMap.put(e3.getSsn(), e3);
+        employeeMap.put(e4.getSsn(), e4);
+        employeeMap.put(e5.getSsn(), e5);
+        
+        System.out.println("Finding the employee with the key of 333-33-3333");
+        System.out.println(employeeMap.get("333-33-3333") + "\n");
+        
+        Set<String> keys = employeeMap.keySet();
+        for(String key : keys){
             Employee found = employeeMap.get(key);
-            System.out.println(found.toString());
+            System.out.println(found);
         }
+        
+        
     }
 }
