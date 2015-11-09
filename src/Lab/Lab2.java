@@ -1,9 +1,9 @@
 package Lab;
 
 //import common.Employee;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+//import java.util.List;
 import java.util.Set;
 //import java.util.*;
 /**
@@ -19,12 +19,12 @@ public class Lab2 {
         Employee e5 = new Employee(5, "Lemmings", "John", "444-44-4444");
         
         //need to learn HashMap
-        List<Employee> list = new ArrayList<Employee>();
-        list.add(e1);
-        list.add(e2);
-        list.add(e3);
-        list.add(e4);
-        list.add(e5);
+//        List<Employee> list = new ArrayList<Employee>();
+//        list.add(e1);
+//        list.add(e2);
+//        list.add(e3);
+//        list.add(e4);
+//        list.add(e5);
         
 //        Set<Employee> set = new TreeSet<Employee>(list);
         
