@@ -32,16 +32,18 @@ public class Lab3 {
         employeeMap.put(e4.getSnn(), e4);
         employeeMap.put(e5.getSnn(), e5);
         
-        Set<String> keys = employeeMap.keySet();
-        for(String key : keys){
-            Employee found = employeeMap.get(key);
-            System.out.println(found.toString());
-        }
+//        Set<String> keys = employeeMap.keySet();
+//        for(String key : keys){
+//            Employee found = employeeMap.get(key);
+//            System.out.println(found.toString());
+//        }
         
         System.out.println("\n");
         
         Collection<Employee> employees = employeeMap.values();
+        
         List<Employee> listSorted = new ArrayList<Employee>(employees);
+        
         Collections.sort(listSorted, new EmployeeByLastName());
         for (Employee emp : listSorted){
             System.out.println(emp);

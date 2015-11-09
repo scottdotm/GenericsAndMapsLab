@@ -46,6 +46,7 @@ public class Lab4 {
         
         Employee emp = null;
         
+        
         System.out.println("Using Iterator : ");
         Iterator<Employee> it = list2.iterator();
           while (it.hasNext()) {
