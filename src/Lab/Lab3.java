@@ -1,6 +1,6 @@
 package Lab;
 
-import common.Employee;
+//import common.Employee;
 //import common.EmployeeByLastName;
 import common.EmployeeBySsn;
 import java.util.ArrayList;
@@ -42,7 +42,7 @@ public class Lab3 {
         
         Collection<Employee> employees = employeeMap.values();
         List<Employee> listSorted = new ArrayList<Employee>(employees);
-        Collections.sort(listSorted, new EmployeeBySsn());
+        Collections.sort(listSorted, new EmployeeByLastName());
         for (Employee emp : listSorted){
             System.out.println(emp);
         }
